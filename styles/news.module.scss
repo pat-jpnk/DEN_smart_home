@@ -1,0 +1,112 @@
+@import "mixins";
+
+// Light 300, Regular 400 imported
+@font-face {
+font-family:"Quicksand";
+src: url("/fonts/Quicksand-VariableFont_wght.ttf");
+font-style: normal;
+font-weight: 300;
+font-display: swap;
+}
+
+// 100
+@font-face {
+  font-family:"Yantramanav";
+  src: url("/fonts/Yantramanav-Thin.ttf");
+  font-style: normal;
+  font-display: swap;
+  }
+
+// 200
+@font-face {
+  font-family:"Yantramanav-Light";
+  src: url("/fonts/Yantramanav-Light.ttf");
+  font-style: normal;
+  font-display: swap;
+  }
+
+// 300
+@font-face {
+  font-family:"Yantramanav-Regular";
+  src: url("/fonts/Yantramanav-Regular.ttf");
+  font-style: normal;
+  font-display: swap;
+  }  
+
+$brand_blue: #19C3F3;
+$black: #242325;
+$platnium: #EBEBEB;
+$lightgrey: #D4D4D8;
+$darkgrey: #7C7C7F;
+
+.newsItem {
+    padding: 2rem;
+    width: 75vw;
+    font-family: Yantramanav-Regular;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    color: $black;
+    @include fadeIn;
+}
+
+.newsItemHeadline:hover {
+    color: $brand_blue;
+}
+
+.newsFeed {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 0 4rem 0;
+}
+
+
+.newsHeadingContainer {
+    display: flex;
+    max-width: 12rem;
+    margin: 2rem auto 2rem auto;
+}
+
+.newsHeading {
+    font-family: Yantramanav;
+    font-weight: 100;
+    font-size: 4rem;
+}
+
+.singleNewsContainer {
+    padding: 5rem;
+    min-height: 90vh;
+    max-height: auto;
+}
+
+.singleNewsHeadline {
+    @include fadeIn;
+    font-family: Yantramanav-Regular;
+    font-size: 4rem;
+    color: $brand_blue;
+    padding: 1rem; 
+}
+
+.singleNewsText {
+    @include fadeIn;
+    font-family: Yantramanav;
+    font-size: 1.5rem;
+}
+
+.singleNewsPage {
+    height: 100%;
+    margin: 0 !important;
+    box-sizing: border-box;
+    min-height: 100vh;
+}
+
+.newsContainer {
+    min-height: 90vh;
+}
+
+.icon {
+    font-size: 3rem !important;
+    color: $lightgrey;
+    margin-bottom: 2rem;
+}

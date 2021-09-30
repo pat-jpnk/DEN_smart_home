@@ -1,0 +1,46 @@
+@mixin fadeIn {
+    animation: textAppears 0.5s linear;
+}
+
+@mixin slideIn {
+    animation: slideFromLeft 5s linear;
+}
+
+@keyframes textAppears {
+    0% {
+        opacity: 0
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideFromLeft {
+    0% {
+        margin-right: 4rem;
+    }
+
+    25% {
+        margin-right: 3rem;
+    }
+
+    50% {
+        margin-right: 2rem;
+    }
+
+    75% {
+        margin-right: 1rem;
+    }
+
+    100% {
+        margin-right: 0rem;
+    }
+}
+
+
+

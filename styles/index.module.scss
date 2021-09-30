@@ -1,0 +1,989 @@
+@import "mixins";
+
+// Light 300, Regular 400 imported
+@font-face {
+font-family:"Quicksand";
+src: url("/fonts/Quicksand-VariableFont_wght.ttf");
+font-style: normal;
+font-weight: 300;
+font-display: swap;
+}
+
+// 100
+@font-face {
+  font-family:"Yantramanav";
+  src: url("/fonts/Yantramanav-Thin.ttf");
+  font-style: normal;
+  font-display: swap;
+  }
+
+// 200
+@font-face {
+  font-family:"Yantramanav-Light";
+  src: url("/fonts/Yantramanav-Light.ttf");
+  font-style: normal;
+  font-display: swap;
+  }
+
+// 300
+@font-face {
+  font-family:"Yantramanav-Regular";
+  src: url("/fonts/Yantramanav-Regular.ttf");
+  font-style: normal;
+  font-display: swap;
+  }  
+
+$brand_blue: #19C3F3;
+$black: #242325;
+$platnium: #EBEBEB;
+$lightgrey: #D4D4D8;
+$darkgrey: #7C7C7F;
+
+// general
+
+.playIcon {
+  color: $darkgrey;
+  opacity: 0.6;
+  font-size: 6rem !important;
+}
+
+.menuIcon {
+  padding: 0;
+}
+
+.landingPage {
+  height: 90vh;
+  max-height: 90vh;
+  margin-bottom: 0;
+}
+
+.awardImage {
+  margin: 2rem 0 0 0;
+}
+
+
+.playerWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.mentionItem {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+}
+
+.sellingPointsHeading {
+  font-family: Yantramanav;
+  font-weight: 100;
+  font-size: 4rem;
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;     
+  -ms-user-select: none;     
+  user-select: none;   
+  width: 14rem;
+  margin: 3vh auto 0 auto;
+}
+
+
+.sellingPointsItem {
+  max-width: inherit;
+  pointer-events: none;
+  font-weight: 300;
+  font-size: 1.5rem;
+  font-family: Yantramanav-Regular;
+  color: $black;
+}
+
+
+.sellingPoint {
+  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 15vw;
+}
+
+.message {
+  margin-top: 2rem;
+}
+
+.messageInput {
+  width: 100%;
+}
+
+.nameInput {
+  width: 95%;
+}
+
+.form {
+  margin-top: 2rem;
+  column-gap: 2rem;
+  row-gap: 1rem;
+}
+
+
+.contactButton {
+  margin-top: 2rem !important;
+  color: white !important;
+  background-color: $brand_blue !important;
+  border: none !important;
+  width: 8rem;
+}
+
+.footer {
+  background-color: $brand_blue;
+  height: 20vh;
+  width: auto;
+  margin: 0;
+  padding: 2rem;
+}
+
+.icon {
+  font-size: 2.5rem !important;
+  color: $platnium;
+}
+
+// desktop
+@media screen and (min-width: 1024px) {
+
+  .renderSectionButton {
+    margin-top: 2rem !important;
+    color: white !important;
+    background-color: $brand_blue !important;
+    border: $brand_blue 0.2rem solid !important;
+    width: 10rem; 
+    font-family: Yantramanav-Regular;
+    font-weight: 300;
+  }
+
+  .renderSection {
+    display: flex;
+    flex-direction: row;
+    padding: 5rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: -2rem;
+  }
+
+  .renderSectionText {
+    font-family: Yantramanav-Light;
+    font-weight: 200;
+    padding: 6rem;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    white-space: wrap;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-content: space-between;
+  }
+
+  .lockRender {
+    display: flex;
+    justify-content: center;
+    margin-top: -10rem;
+    @include fadeIn;
+  }
+
+  .render {
+    pointer-events: none;
+    width: 85vw;
+    margin: 0 auto 0 auto;
+  }
+
+  .menu {
+    display: flex;
+    align-items: center;
+
+    h5 {
+      margin-left: 1.5rem;
+      color: $black;
+      font-size: 1.5rem;
+      font-family: Yantramanav-Light;
+      font-weight: 100;
+    }
+  }
+  
+  .landing {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 1rem 0 0 0;
+  
+    h1 {
+      font-family: Yantramanav;
+      font-weight: 100;
+      font-size: 5rem;
+      pointer-events: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;     
+      -ms-user-select: none;     
+      user-select: none;   
+    }
+  
+    p {
+      margin-top: 1rem;
+      font-family: Yantramanav-Light;
+      font-weight: 100;
+      font-size: 1.5rem;
+      width: 35rem;
+      color: $black;
+      pointer-events: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;     
+      -ms-user-select: none;     
+      user-select: none; 
+    }
+  }
+  
+  
+  .awards {
+    margin: 3rem 0 0 0;
+    flex-direction: column;
+    padding: 5rem;
+    align-items: center;
+    justify-content: space-evenly;
+  
+  }
+  
+  .top {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    height: 10vh;
+    max-height: 10vh;
+    align-items: center;
+  }
+  
+  .reactPlayer {
+    position: relative;
+    max-height: 90vh !important;
+    overflow: hidden !important;
+  }
+  
+  .mentions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    height: 15vh;
+    background: transparent;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    pointer-events: none;
+    filter: grayscale(100%);
+    margin-top: 8rem;
+  }
+  
+  
+  .sellingPoints {
+    pointer-events: none;
+    padding: 5rem;
+    width: 80vw;
+    height: 60vh;
+    margin: 0 auto 0 auto;
+    display: grid;
+    align-items: start;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 50% 50%; 
+    row-gap: 5rem;
+   }
+  
+  .spWifi {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 15vw;
+    grid-column-start: 1;
+    grid-column-end: auto;
+    grid-row-start: 1;
+    grid-row-end: auto;
+  }
+  
+  .spPriceTag {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 15vw;
+    grid-column-start: 2;
+    grid-column-end: auto;
+    grid-row-start: 2;
+    grid-row-end: auto;
+  }
+  
+  .spShield {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 15vw;
+    grid-column-start: 3;
+    grid-column-end: auto;
+    grid-row-start: 1;
+    grid-row-end: auto;
+  }
+  
+  .spLock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 15vw;
+    grid-column-start: 4;
+    grid-column-end: auto;
+    grid-row-start: 2;
+    grid-row-end: auto;
+  }
+  
+  .spDoor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 15vw;
+    grid-column-start: 5;
+    grid-column-end: auto;
+    grid-row-start: 1;
+    grid-row-end: auto;
+  }
+  
+  .sellingPointIcon {
+    font-size: 3.5rem !important;
+    color: $brand_blue;
+  }
+  
+  .sellingPointDescription {
+    max-width: inherit;
+    pointer-events: none;
+    font-weight: 200;
+    font-family: Yantramanav-Light;
+    color: $black;
+    text-align: center;
+    white-space: wrap;
+  }
+
+  
+  .contactInformation {
+    display: grid;
+    align-items: start;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 25%;
+    column-gap: 0rem;
+    row-gap: 1rem;
+  }
+
+  
+  .contactHeading {
+    font-family: Yantramanav;
+    font-weight: 100;
+    font-size: 4rem;
+    pointer-events: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;     
+    -ms-user-select: none;     
+    user-select: none;   
+    width: 14rem;
+    margin: 5rem auto 0 auto;
+  }
+  
+  .formBackground {
+    padding: 3.5rem;
+    width: 65vw;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5vh;
+    margin-top: 5vh;
+  
+    h3 {
+      font-size: 2.5rem;
+      font-family: Yantramanav-Light;
+      font-weight: 200;
+    }
+  }
+  
+  .socialIcons {
+    height: 100%;
+    width: 10rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+  
+  }
+
+  .copyrightNote {
+    color: $platnium;
+    font-size: 1rem;
+    font-family: Yantramanav-Light;
+    font-weight: 100;
+    width: 10rem;
+    margin: auto;
+  }
+
+  .mobileMenu {
+    display: none;
+  }
+
+  .emailInput {
+    width: 95%;
+  }
+}
+
+// tablet
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+  .renderSectionButton {
+    margin-top: 2rem !important;
+    color: white !important;
+    background-color: $brand_blue !important;
+    border: $brand_blue 0.2rem solid !important;
+    width: 10rem; 
+    font-family: Yantramanav-Regular;
+    font-weight: 300;
+  }
+
+  .renderSectionText {
+    font-family: Yantramanav-Light;
+    font-weight: 200;
+    padding: 3rem;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    white-space: wrap;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: space-between;
+  }
+
+
+  .renderSection {
+    display: flex;
+    flex-direction: column;
+    padding: 5rem;
+    margin-top: -10rem;
+  }
+
+  .menu {
+    display: flex;
+    align-items: center;
+    height: 2rem;
+  
+    h5 {
+      margin-left: 1.5rem;
+      color: $black;
+      font-size: 1.5rem;
+      font-family: Yantramanav-Light;
+      font-weight: 100;
+    }
+  }
+  
+  .landing {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 1rem 0 0 0;
+  
+    h1 {
+      font-family: Yantramanav;
+      font-weight: 100;
+      font-size: 5rem;
+      pointer-events: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;     
+      -ms-user-select: none;     
+      user-select: none;   
+    }
+  
+    p {
+      margin-top: 1rem;
+      font-family: Yantramanav-Light;
+      font-weight: 100;
+      font-size: 1.5rem;
+      width: 35rem;
+      color: $black;
+      pointer-events: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;     
+      -ms-user-select: none;     
+      user-select: none; 
+    }
+  }
+  
+  
+  .awards {
+    margin: -5rem 0 0 0;
+    flex-direction: column;
+    padding: 5rem;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  
+  .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    height: 10vh;
+    max-height: 10vh;
+  }
+  
+  .reactPlayer {
+    position: relative;
+    height: 90vh !important;
+  }
+  
+  .mentions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    pointer-events: none;
+    filter: grayscale(100%);
+    margin-top: 2rem;
+    padding: 5rem;
+  }
+  
+  
+  .sellingPoints {
+    pointer-events: none;
+    padding: 3rem;
+    width: 95vw;
+    height: auto;
+    margin: 0 auto 0 auto;
+    display: grid;
+    align-items: start;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 50% 50%; 
+    row-gap: 2rem;
+   }
+  
+  .spWifi {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 15vw;
+    grid-column-start: 1;
+    grid-column-end: auto;
+    grid-row-start: 1;
+    grid-row-end: auto;
+  }
+  
+  .spPriceTag {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 15vw;
+    grid-column-start: 2;
+    grid-column-end: auto;
+    grid-row-start: 2;
+    grid-row-end: auto;
+  }
+  
+  .spShield {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 15vw;
+    grid-column-start: 3;
+    grid-column-end: auto;
+    grid-row-start: 1;
+    grid-row-end: auto;
+  }
+  
+  .spLock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 15vw;
+    grid-column-start: 4;
+    grid-column-end: auto;
+    grid-row-start: 2;
+    grid-row-end: auto;
+  }
+  
+  .spDoor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 15vw;
+    grid-column-start: 5;
+    grid-column-end: auto;
+    grid-row-start: 1;
+    grid-row-end: auto;
+  }
+  
+  .sellingPointIcon {
+    font-size: 3.5rem !important;
+    color: $brand_blue;
+  }
+  
+  .sellingPointDescription {
+    max-width: inherit;
+    pointer-events: none;
+    font-weight: 200;
+    font-family: Yantramanav-Light;
+    color: $black;
+    text-align: center;
+    white-space: wrap;
+    width: 15rem;
+  }
+  
+  .contactInformation {
+    display: grid;
+    align-items: start;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 25%;
+    column-gap: 0rem;
+    row-gap: 1rem;
+  }
+  
+  .contactHeading {
+    font-family: Yantramanav;
+    font-weight: 100;
+    font-size: 4rem;
+    pointer-events: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;     
+    -ms-user-select: none;     
+    user-select: none;   
+    width: 14rem;
+    margin: 5rem auto 0 auto;
+  }
+  
+  .formBackground {
+    padding: 3.5rem;
+    width: 65vw;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5vh;
+    margin-top: 5vh;
+  
+    h3 {
+      font-size: 2.5rem;
+      font-family: Yantramanav-Light;
+      font-weight: 200;
+    }
+  }
+  
+  .socialIcons {
+    height: 100%;
+    width: 10rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+  
+  }
+
+  .copyrightNote {
+    color: $platnium;
+    font-size: 1rem;
+    font-family: Yantramanav-Light;
+    font-weight: 100;
+    width: 10rem;
+    margin: auto;
+  }
+
+  .mobileMenu {
+    display: none;
+  }
+}
+
+
+// mobile
+@media screen and (max-width: 767px) {
+
+  .renderSectionButton {
+    margin-top: 2rem !important;
+    color: white !important;
+    background-color: $brand_blue !important;
+    border: $brand_blue 0.2rem solid !important;
+    width: 10rem; 
+    font-family: Yantramanav-Regular;
+    font-weight: 300;
+  }
+
+  .renderSectionText {
+    font-family: Yantramanav-Light;
+    font-weight: 200;
+    padding: 2rem;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    white-space: wrap;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: space-between; 
+    text-align: center;
+  }
+
+  .renderSection {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .mobileNavigationItem {
+    height: auto;
+    padding: 1rem;
+    font-weight: 100;
+    font-family: Yantramanav;
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .mobileNavigation {
+    background-color: white;
+    width: 100vw;
+    height: 40vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    margin-top: 10vh;
+  }
+
+  .menu {
+    display: none;
+  }
+  
+  .landing {
+    width: 90vw;
+    margin: auto;
+
+    h1 {
+      font-family: Yantramanav;
+      font-weight: 100;
+      font-size: 5rem;
+      pointer-events: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;     
+      -ms-user-select: none;     
+      user-select: none; 
+      max-width: inherit;
+      text-align: center;
+      line-height: 0.8;
+    }
+  
+    p {
+      margin-top: 1rem;
+      font-family: Yantramanav-Light;
+      font-weight: 100;
+      font-size: 1.5rem;
+      width: auto;
+      max-width: inherit;
+      color: $black;
+      pointer-events: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;     
+      -ms-user-select: none;     
+      user-select: none; 
+      text-align: center;
+    }
+  }
+  
+  
+  .awards {
+    margin: 3rem 0 0 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  
+  }
+  
+  .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    margin: 0 auto 0 auto;
+    max-width: 95vw;
+    max-height: 10vh;
+  }
+  
+  .reactPlayer {
+    position: relative;
+    max-height: 90vh !important;
+    overflow: hidden !important;
+  }
+
+  .mentions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    height: auto;
+    pointer-events: none;
+    filter: grayscale(100%);
+    margin-top: 10rem;
+  }
+  
+  .sellingPoints {
+    pointer-events: none;
+    padding: 5rem;
+    width: 80vw;
+    height: auto;
+    margin: 0 auto 0 auto;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   }
+  
+  .spWifi {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 15vw;
+    margin-bottom: 3rem;
+  }
+  
+  .spPriceTag {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 15vw;
+    margin-bottom: 3rem;
+  }
+  
+  .spShield {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 15vw;
+    margin-bottom: 3rem;
+  }
+  
+  .spLock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 15vw;
+    margin-bottom: 3rem;
+  }
+  
+  .spDoor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 15vw;
+  }
+  
+  .sellingPointIcon {
+    font-size: 3.5rem !important;
+    color: $brand_blue;
+  }
+  
+  .sellingPointDescription {
+    max-width: inherit;
+    width: 60vw;
+    pointer-events: none;
+    font-weight: 200;
+    font-family: Yantramanav-Light;
+    color: $black;
+    text-align: center;
+    white-space: wrap;
+  }
+
+  .formItem {
+    margin: 2rem 0 0 0;
+  }
+  
+  .contactInformation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: space-between;
+  }
+  
+  .contactHeading {
+    font-family: Yantramanav;
+    font-weight: 100;
+    font-size: 4rem;
+    pointer-events: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;     
+    -ms-user-select: none;     
+    user-select: none;   
+    width: 14rem;
+    margin: 0 auto 0 auto;
+  }
+  
+  .formBackground {
+    padding: 3.5rem;
+    width: 80vw;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5vh;
+    margin-top: 5vh;
+  
+    h3 {
+      font-size: 2.5rem;
+      font-family: Yantramanav-Light;
+      font-weight: 200;
+    }
+  }
+  
+  .socialIcons {
+    height: 100%;
+    width: 10rem;
+    margin: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+  
+  }
+  
+  .copyrightNote {
+    color: $platnium;
+    font-size: 1rem;
+    font-family: Yantramanav-Light;
+    font-weight: 100;
+    width: 8.5rem;
+    margin: auto;
+  }
+
+
+  .mobileMenuIcon {
+    font-size: 3rem !important;
+    margin: 0.25rem;
+    color: $brand_blue;
+  }
+
+  .mobileMenu {
+    display: initial;
+  }
+}

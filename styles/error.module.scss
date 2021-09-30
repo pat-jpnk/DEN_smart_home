@@ -1,0 +1,58 @@
+@import "mixins";
+
+// Light 300, Regular 400 imported
+@font-face {
+font-family:"Quicksand";
+src: url("/fonts/Quicksand-VariableFont_wght.ttf");
+font-style: normal;
+font-weight: 300;
+font-display: swap;
+}
+
+// 100
+@font-face {
+  font-family:"Yantramanav";
+  src: url("/fonts/Yantramanav-Thin.ttf");
+  font-style: normal;
+  font-display: swap;
+  }
+
+// 200
+@font-face {
+  font-family:"Yantramanav-Light";
+  src: url("/fonts/Yantramanav-Light.ttf");
+  font-style: normal;
+  font-display: swap;
+  }
+
+// 300
+@font-face {
+  font-family:"Yantramanav-Regular";
+  src: url("/fonts/Yantramanav-Regular.ttf");
+  font-style: normal;
+  font-display: swap;
+  }  
+
+$brand_blue: #19C3F3;
+$black: #242325;
+$platnium: #EBEBEB;
+$lightgrey: #D4D4D8;
+$darkgrey: #7C7C7F;
+
+
+.notFoundPage {
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40vh;
+}
+
+
+.notFoundMessage {
+    color: $brand_blue;
+    font-family: Yantramanav;
+    font-size: 3rem;
+}
